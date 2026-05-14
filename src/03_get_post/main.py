@@ -36,5 +36,14 @@ def form():
     return render_template("form.html") # Render the form template for GET requests
 
 
+# In the html file, we have set the form action to "/submit", so we need to create a route for "/submit" to handle the form submission
+@app.route("/submit", methods = ["GET", "POST"])
+def submit():
+    if request.method == "POST":
+        name = request.form.get("name")
+        return f"Hello, {name}!"
+    return render_template("form.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True)
