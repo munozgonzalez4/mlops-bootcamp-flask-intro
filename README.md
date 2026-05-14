@@ -1,2 +1,2 @@
-# flask_intro
+# mlops-bootcamp-flask-intro
 Introduction to Flask Framework
