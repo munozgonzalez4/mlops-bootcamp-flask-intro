@@ -36,3 +36,4 @@ To deactivate: conda deactivate
 Useful commands:
 To go back in the path: cd ..
 To install requirements: pip install -r requirements.txt
+To run the app: python app.py
