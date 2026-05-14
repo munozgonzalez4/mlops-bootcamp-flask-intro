@@ -1,39 +1,54 @@
 # mlops-bootcamp-flask-intro
-Introduction to Flask Framework
+A simple Flask exploration for building web applications with Python.
 
-Flask: used to develop end to end web app aplications.
-Other framework like FastAPI or Django.
+This repository is a small Flask introduction, with examples of routing, templates, and dynamic pages.
 
-Two important components:
-    - Web Server Gateway Interface (WSGI)
-    - Jinja 2 Template Engine
+Flask is used to develop end-to-end web applications. Other popular Python web frameworks include FastAPI and Django.
 
-Definition: complete web framework which is created with Python programming.
+Key components in this project:
+- Web Server Gateway Interface (WSGI)
+- Jinja2 template engine
 
-Concept: Web Server.
-- Where we deploy the applications
-- It's located in an instance (AWS, Azure, Apache, ...)
-- Web App is created in Flask framework
-- Request from users arrive to Web Server -> Server communicates with the Web App to get the response back. Everything happens via a Protocol: WSGI
+What this means:
 
-Concept: Jinja 2.
-- It's a Web Template Engine
-- Combines a Web Template (pages) with a Data Source (SQL, csv, Mongo, ML Model...)
-- Web Pages gets loaded
-- Example: Web Page with a "upload" button of an image of a dog/cat, then Web Page interacts with ML Model that will return if it's a dog or a cat
-- Summary: combine a layout of a page with creating dynamic web pages.  
+Web Server
+- Deploys the application
+- Runs on an instance such as AWS, Azure, Apache, etc.
+- Receives requests from users and forwards them to the Flask app
+- Communicates with the app using the WSGI protocol
 
+Jinja2
+- A web template engine
+- Combines HTML templates with data sources like SQL, CSV, MongoDB, or ML models
+- Generates dynamic pages based on the data
+- Example: a page with an upload button for a dog/cat image, where the app returns whether the image is a dog or a cat
+- In short, it merges page layout and data to create dynamic web pages
 
 ---
 
-Steps to create the environment:
+Environment setup:
 
+```bash
 conda create -p venv python==3.12
-If facing error, to clean use: conda clean --all
 conda activate venv/
-To deactivate: conda deactivate
+```
+
+If you see issues, clean Conda with:
+
+```bash
+conda clean --all
+```
+
+To deactivate:
+
+```bash
+conda deactivate
+```
 
 Useful commands:
-To go back in the path: cd ..
-To install requirements: pip install -r requirements.txt
-To run the app: python app.py
+
+```bash
+cd ..
+pip install -r requirements.txt
+python app.py
+```
